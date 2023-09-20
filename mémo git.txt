@@ -12,3 +12,6 @@ git status
 git add .
 git commit -m "commentaire lié à la tâche effectuer"
 git push -u origin main
+
+3- Cloner un repository
+git clone suivi de l'url du repository
