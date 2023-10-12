@@ -1,1 +1,19 @@
 
+main .location {
+    background-color:#EAEAEA;
+    padding: 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.location h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #353535;
+}
+
+.location i {
+    color: #353535;
+}
