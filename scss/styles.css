@@ -23,7 +23,7 @@ body {
   padding: 0px;
 }
 
-main .location {
+main .localisation {
   background-color: #EAEAEA;
   padding: 0.1rem;
   display: flex;
@@ -32,12 +32,42 @@ main .location {
   gap: 1rem;
 }
 
-.location h3 {
+.localisation h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #353535;
 }
 
-.location i {
+.localisation i {
   color: #353535;
+}
+
+.info {
+  text-align: center;
+  background-color: #F6F6F6;
+  padding: 2.5rem;
+}
+
+.info h2 {
+  font-family: "Roboto", sans-serif;
+  width: 275px;
+  height: 68px;
+}
+
+.info p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #353535;
+  height: 46px;
+}
+
+.info button {
+  font-family: "Roboto", sans-serif;
+  width: 186px;
+  height: 50px;
+  border-radius: 25px;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  color: white;
+  border: none;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,5 @@
 
-main .location {
+main .localisation {
     background-color:#EAEAEA;
     padding: 0.1rem;
     display: flex;
@@ -8,12 +8,32 @@ main .location {
     gap: 1rem;
 }
 
-.location h3 {
+.localisation h3 {
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color: #353535;
 }
 
-.location i {
+.localisation i {
     color: #353535;
+}
+
+.info {
+    text-align: center;
+    background-color: #F6F6F6;
+    padding: 2.5rem;
+}
+
+.info h2{
+    font-family: 'Roboto', sans-serif;
+    width: 275px;
+    height: 68px;
+}
+
+.info p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300 ;
+    color: #353535;
+    height: 46px;
+
 }
