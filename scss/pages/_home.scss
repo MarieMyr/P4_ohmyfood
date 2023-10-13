@@ -6,34 +6,34 @@ main .localisation {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}
 
-.localisation h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    color: #353535;
-}
+    h3 {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #353535;
+    }
 
-.localisation i {
-    color: #353535;
+    i {
+        color: #353535;
+    }
 }
 
 .info {
     text-align: center;
     background-color: #F6F6F6;
     padding: 2.5rem;
-}
 
-.info h2{
-    font-family: 'Roboto', sans-serif;
-    width: 275px;
-    height: 68px;
-}
+    h2{
+        font-family: 'Roboto', sans-serif;
+        width: 275px;
+        height: 68px;
+    }
 
-.info p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300 ;
-    color: #353535;
-    height: 46px;
-
+    p {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300 ;
+        color: #353535;
+        height: 46px;
+    
+    }
 }
