@@ -1,5 +1,7 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -9,7 +11,6 @@ header {
   padding: 14px 89px 20px 89px;
   position: relative;
 }
-
 header h1 {
   font-weight: 400px;
   font-style: italic;
@@ -30,15 +31,14 @@ main .localisation {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  text-align: center;
 }
-
-.localisation h3 {
+main .localisation h3 {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #353535;
 }
-
-.localisation i {
+main .localisation i {
   color: #353535;
 }
 
@@ -47,13 +47,11 @@ main .localisation {
   background-color: #F6F6F6;
   padding: 2.5rem;
 }
-
 .info h2 {
   font-family: "Roboto", sans-serif;
   width: 275px;
   height: 68px;
 }
-
 .info p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -61,8 +59,75 @@ main .localisation {
   height: 46px;
 }
 
+/***Fonctionnement ***/
+.fonctionnement {
+  counter-reset: étapes;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 1rem 2rem 1rem;
+  margin: px;
+}
+.fonctionnement li {
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  padding: 1.7rem 2rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  position: relative;
+}
+.fonctionnement li::before {
+  content: counter(étapes);
+  counter-increment: étapes;
+  color: #FFFFFF;
+  background-color: #9356DC;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 1.4rem;
+  left: -1rem;
+}
+.fonctionnement ol {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  padding-left: 28px;
+}
+.fonctionnement i {
+  margin-right: 1rem;
+}
+.fonctionnement .fa-mobile-screen-button {
+  color: #7E7E7E;
+}
+.fonctionnement .fa-list-ul {
+  color: #7E7E7E;
+}
+.fonctionnement .fa-store {
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  font-family: "Roboto", sans-serif;
+}
+
+.carte_restaurant {
+  width: 340px;
+  height: 251px;
+  background-color: #FFFFFF;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.carte_restaurant img {
+  width: 346px;
+  height: 231px;
+  border-radius: 15px 15px 0px 0px;
+}
+
 .info button {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
   width: 186px;
   height: 50px;
   border-radius: 25px;
@@ -70,4 +135,9 @@ main .localisation {
   color: white;
   border: none;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+}
+
+footer {
+  background-color: #353535;
+  color: white;
 }/*# sourceMappingURL=styles.css.map */
