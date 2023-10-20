@@ -24,6 +24,11 @@ body {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 main .localisation {
   background-color: #EAEAEA;
   padding: 0.1rem;
@@ -64,7 +69,6 @@ main .localisation i {
   counter-reset: étapes;
   font-family: "Roboto", sans-serif;
   padding: 2rem 1rem 2rem 1rem;
-  margin: px;
 }
 .fonctionnement li {
   background-color: #F6F6F6;
@@ -107,22 +111,75 @@ main .localisation i {
   color: #9356DC;
 }
 
+/***Restaurants ***/
 .restaurants {
   background-color: #F6F6F6;
   font-family: "Roboto", sans-serif;
+  padding: 1.5rem;
 }
 
-.carte_restaurant {
-  width: 340px;
-  height: 251px;
-  background-color: #FFFFFF;
-  border-radius: 0px 0px 15px 15px;
+.cartes_restaurants {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+.cartes_restaurants .new {
+  position: relative;
+}
+.cartes_restaurants .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 29px;
+  width: 80px;
+  background-color: #99E2D0;
+  border-radius: 2px;
+  color: #008766;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
 }
 
-.carte_restaurant img {
-  width: 346px;
-  height: 231px;
+.cartes {
+  border-radius: 15px;
+  background-color: white;
+}
+.cartes__img {
+  height: 200px;
+  background-size: cover;
   border-radius: 15px 15px 0px 0px;
+}
+.cartes__img-1 {
+  background-image: url("../../images/restaurants/restaurant-1.jpg");
+}
+.cartes__img-2 {
+  background-image: url("../../images/restaurants/restaurant-2.jpg");
+}
+.cartes__img-3 {
+  background-image: url("../../images/restaurants/restaurant-3.jpg");
+}
+.cartes__img-4 {
+  background-image: url("../../images/restaurants/restaurant-4.jpg");
+}
+.cartes_description {
+  position: relative;
+}
+.cartes_description h3, .cartes_description p {
+  margin: 0.5rem;
+}
+.cartes_description p {
+  font-weight: 300;
+  padding-bottom: 0.5rem;
+}
+.cartes_description h3 {
+  padding-top: 0.5rem;
+}
+.cartes_description i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .info button {
@@ -139,5 +196,19 @@ main .localisation i {
 
 footer {
   background-color: #353535;
+  padding: 1rem 1rem;
   color: white;
+  font-family: "Roboto", sans-serif;
+}
+footer h2 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 18px;
+}
+footer p {
+  padding: 0.1rem;
+  font-weight: 400;
+}
+footer i {
+  padding-right: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */

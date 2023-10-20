@@ -1,4 +1,5 @@
 
+
 main .localisation {
     background-color:#EAEAEA;
     padding: 0.1rem;
@@ -47,7 +48,6 @@ main .localisation {
     font-family: 'Roboto', sans-serif;
     padding: 2rem 1rem 2rem 1rem;
     
-    margin: px;
 
 & li{
     background-color: #F6F6F6;
@@ -97,21 +97,81 @@ main .localisation {
     }
 }
 
+/***Restaurants ***/
+
 .restaurants {
     background-color: #F6F6F6;
     font-family: 'Roboto', sans-serif;
+    padding: 1.5rem;
 }
 
-.carte_restaurant {
-    width: 340px;
-    height: 251px;
-    background-color:#FFFFFF;
-    border-radius: 0px 0px 15px 15px;
 
+.cartes_restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap:2rem;
+
+.new {
+    position: relative;
+}
+.new::before{
+    content:"Nouveau";
+    position:absolute;
+    height: 29px;
+    width: 80px;
+    background-color: #99E2D0;
+    border-radius: 2px;
+    color: #008766;
+    display: grid;
+    place-items: center;
+    right: 1rem;
+    top: 1rem;
+}
 }
 
-.carte_restaurant img {
-    width: 346px;
-    height: 231px;
+.cartes{
+    border-radius: 15px;
+    background-color: white;
+    
+    &__img {
+    height: 200px;
+    background-size: cover;
     border-radius: 15px 15px 0px 0px;
+    }
+    
+    @for $i from 1 through 4 {
+    &__img-#{$i} {
+        background-image: url("../../images/restaurants/restaurant-#{$i}.jpg");
 }
+}
+
+&_description {
+    position: relative;
+    
+
+    h3,p {
+        margin: 0.5rem;
+        
+        
+    }
+    p {
+        font-weight: 300;
+        
+        padding-bottom: 0.5rem;
+    }
+
+    h3 {
+        padding-top: 0.5rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+        position: absolute;
+        right: 1rem;
+        top : 50%;
+        transform: translateY(-50%) ;
+    }
+}
+}
+    
+
