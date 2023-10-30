@@ -1,5 +1,4 @@
 
-
 main .localisation {
     background-color:#EAEAEA;
     padding: 0.1rem;
@@ -28,7 +27,7 @@ main .localisation {
 
     h2{
         font-family: 'Roboto', sans-serif;
-        width: 275px;
+        
         height: 68px;
     }
 
@@ -141,7 +140,7 @@ main .localisation {
     
     @for $i from 1 through 4 {
     &__img-#{$i} {
-        background-image: url("../../images/restaurants/restaurant-#{$i}.jpg");
+        background-image: url("./../images/restaurants/restaurant-#{$i}.jpg");
 }
 }
 
@@ -170,8 +169,64 @@ main .localisation {
         right: 1rem;
         top : 50%;
         transform: translateY(-50%) ;
+        &:active{
+            color: red;
+        
+        }
     }
 }
 }
     
 
+
+@media screen and (min-width: 820px) {
+    
+    .cartes_restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.fonctionnement ol {
+    display: flex;
+    flex-direction: row;
+
+    li{
+        padding: 1.7rem 1rem;
+    
+}
+}
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+    h1 {
+        text-align: center; 
+}
+
+.info{
+    padding: 30px;
+}
+h2,p{
+    margin: 0;
+}
+
+.fonctionnement , .restaurants{
+    padding: 50px 180px;
+}
+.fonctionnement ol {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+    }
+
+.cartes_restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 50px;
+    
+}
+}

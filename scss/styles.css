@@ -7,12 +7,11 @@ header {
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
   display: flex;
-  align-items: center;
+  justify-content: center;
   padding: 14px 89px 20px 89px;
   position: relative;
 }
 header h1 {
-  font-weight: 400px;
   font-style: italic;
   width: 197px;
   height: 36px;
@@ -54,7 +53,6 @@ main .localisation i {
 }
 .info h2 {
   font-family: "Roboto", sans-serif;
-  width: 275px;
   height: 68px;
 }
 .info p {
@@ -150,16 +148,16 @@ main .localisation i {
   border-radius: 15px 15px 0px 0px;
 }
 .cartes__img-1 {
-  background-image: url("../../images/restaurants/restaurant-1.jpg");
+  background-image: url("./../images/restaurants/restaurant-1.jpg");
 }
 .cartes__img-2 {
-  background-image: url("../../images/restaurants/restaurant-2.jpg");
+  background-image: url("./../images/restaurants/restaurant-2.jpg");
 }
 .cartes__img-3 {
-  background-image: url("../../images/restaurants/restaurant-3.jpg");
+  background-image: url("./../images/restaurants/restaurant-3.jpg");
 }
 .cartes__img-4 {
-  background-image: url("../../images/restaurants/restaurant-4.jpg");
+  background-image: url("./../images/restaurants/restaurant-4.jpg");
 }
 .cartes_description {
   position: relative;
@@ -181,7 +179,47 @@ main .localisation i {
   top: 50%;
   transform: translateY(-50%);
 }
+.cartes_description i:active {
+  color: red;
+}
 
+@media screen and (min-width: 820px) {
+  .cartes_restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .fonctionnement ol {
+    display: flex;
+    flex-direction: row;
+  }
+  .fonctionnement ol li {
+    padding: 1.7rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h1 {
+    text-align: center;
+  }
+  .info {
+    padding: 30px;
+  }
+  h2, p {
+    margin: 0;
+  }
+  .fonctionnement, .restaurants {
+    padding: 50px 180px;
+  }
+  .fonctionnement ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .cartes_restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+  }
+}
 .info button {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
@@ -237,6 +275,21 @@ footer i {
   padding-right: 0.5rem;
 }
 
+@media screen and (min-width: 820px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+}
 .bannière img {
   width: 100%;
   -o-object-fit: cover;
@@ -326,4 +379,15 @@ footer i {
 .button {
   margin: auto;
   padding: 40px 0 40px 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding-left: 193px;
+    padding-right: 193px;
+  }
+  .resto_main {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
 }/*# sourceMappingURL=styles.css.map */

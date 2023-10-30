@@ -31,6 +31,8 @@
 }
 }
 
+
+
 .resto_main {
    padding: 0 1rem;
    background-color: #F6F6F6;
@@ -101,4 +103,17 @@ gap: 40px;
 .button {
 margin: auto;
 padding: 40px 0  40px 0;
+}
+
+@media screen and (min-width: 1024px){
+   .container{
+   padding-left: 193px;
+   padding-right: 193px;
+}
+
+.resto_main{
+   padding-left: 200px;
+   padding-right: 200px;
+}
+
 }

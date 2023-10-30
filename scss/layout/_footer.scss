@@ -22,3 +22,22 @@ footer {
     }
 }
 
+@media screen and (min-width: 820px) {
+    
+    footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   }
+}
+
+@media screen and (min-width: 1024px){
+
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        gap:2rem;
+
+    }
+}
