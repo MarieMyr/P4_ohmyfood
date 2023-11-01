@@ -25,6 +25,7 @@ footer {
 @media screen and (min-width: 820px) {
     
     footer {
+        padding: 20px 35px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -35,9 +36,39 @@ footer {
 @media screen and (min-width: 1024px){
 
     footer {
-        display: flex;
-        justify-content: flex-end;
-        gap:2rem;
-
+       position: relative;
+      height: 50px;
+      padding: 30px 25px 30px 25px;
+    
     }
+
+    .logo {
+        right: 5rem;
+        position: absolute;
+        padding-left: 16rem;
+        margin-top: 30px;
+    }
+
+    .footer-info {
+       position: absolute;
+       display: flex;
+       right: 500px;
+       gap:0.5rem;
+       margin-top: 30px;
+    }
+
+    .footer-info2 {
+        align-items: center;
+        display: flex;
+        position: absolute;
+        right:250px;
+        gap:0.5rem;
+        margin-top: 30px;
+        
+        p, a{
+            font-weight: 300;
+        
+    }
+
+}
 }

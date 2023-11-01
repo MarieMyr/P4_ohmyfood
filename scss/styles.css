@@ -74,6 +74,7 @@ main .localisation i {
   padding: 1.7rem 2rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
   position: relative;
+  width: auto;
 }
 .fonctionnement li::before {
   content: counter(étapes);
@@ -188,12 +189,21 @@ main .localisation i {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
+  .fonctionnement h2 {
+    padding-left: 10px;
+  }
+  .restaurants {
+    padding-bottom: 50px;
+  }
   .fonctionnement ol {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    padding: 13px;
   }
   .fonctionnement ol li {
     padding: 1.7rem 1rem;
+    width: px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -214,10 +224,12 @@ main .localisation i {
     flex-direction: row;
     justify-content: center;
   }
+  .fonctionnement ol li {
+    width: 322px;
+  }
   .cartes_restaurants {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px;
+    margin-top: 30px;
+    gap: 50px 100px;
   }
 }
 .info button {
@@ -277,6 +289,7 @@ footer i {
 
 @media screen and (min-width: 820px) {
   footer {
+    padding: 20px 35px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -285,9 +298,33 @@ footer i {
 }
 @media screen and (min-width: 1024px) {
   footer {
+    position: relative;
+    height: 50px;
+    padding: 30px 25px 30px 25px;
+  }
+  .logo {
+    right: 5rem;
+    position: absolute;
+    padding-left: 16rem;
+    margin-top: 30px;
+  }
+  .footer-info {
+    position: absolute;
     display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
+    right: 500px;
+    gap: 0.5rem;
+    margin-top: 30px;
+  }
+  .footer-info2 {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    right: 250px;
+    gap: 0.5rem;
+    margin-top: 30px;
+  }
+  .footer-info2 p, .footer-info2 a {
+    font-weight: 300;
   }
 }
 .bannière img {
@@ -381,6 +418,19 @@ footer i {
   padding: 40px 0 40px 0;
 }
 
+@media screen and (min-width: 820px) {
+  .resto_title {
+    text-align: center;
+  }
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .resto_main {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
 @media screen and (min-width: 1024px) {
   .container {
     padding-left: 193px;

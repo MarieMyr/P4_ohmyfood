@@ -105,6 +105,28 @@ margin: auto;
 padding: 40px 0  40px 0;
 }
 
+
+@media screen and (min-width: 820px) {
+
+.resto_title {
+      text-align: center;
+   }
+   .container{
+      padding-left: 50px;
+      padding-right: 50px;
+   }
+   
+   .resto_main{
+      padding-left: 50px;
+      padding-right: 50px;
+   }
+   
+
+}
+
+
+
+
 @media screen and (min-width: 1024px){
    .container{
    padding-left: 193px;
