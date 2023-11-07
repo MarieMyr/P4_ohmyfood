@@ -1,5 +1,7 @@
 
-main .localisation {
+/*****  Localisation *****/
+
+.localisation {
     background-color:#EAEAEA;
     padding: 0.1rem;
     display: flex;
@@ -9,7 +11,7 @@ main .localisation {
     text-align: center;
 
     & h3 {
-        font-family: 'Roboto', sans-serif;
+       font-family: 'Roboto', sans-serif;
         font-weight: 500;
         color: #353535;
     }
@@ -19,6 +21,9 @@ main .localisation {
 
     }
 }
+
+
+/*****  Onglet information *****/
 
 .info {
     text-align: center;
@@ -40,7 +45,7 @@ main .localisation {
     }
 }
 
-/***Fonctionnement ***/
+/***** Fonctionnement *****/
 
 .fonctionnement {
     counter-reset: étapes;
@@ -97,7 +102,7 @@ main .localisation {
     }
 }
 
-/***Restaurants ***/
+/***** Restaurants *****/
 
 .restaurants {
     background-color: #F6F6F6;
@@ -164,19 +169,69 @@ main .localisation {
         padding-top: 0.5rem;
     }
 
+
+
     i {
         font-size: 1.5rem;
         position: absolute;
         right: 1rem;
         top : 50%;
         transform: translateY(-50%) ;
-        &:active{
-            color: red;
         
-        }
+        
+    }   
+
+    .fas {
+        color: transparent;
+        background-image: linear-gradient(to top,#9356DC,#FF79DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
     }
+    &:hover .fas{
+            opacity: 1;
+            transform: translateY(-50%) ;
+    
+        }
+}    
 }
-}
+
+        .loader {
+            position: fixed;
+            display: grid;
+            place-items: center;
+            background-color:#FFFFFF;
+            inset: 0;
+            z-index: 1;
+            opacity: 0.8;
+            animation: chargement 1s 2s forwards;
+        
+             &::after {
+                content: "";
+                height: 70px;
+                width: 70px;
+                border-radius: 50px;
+                border-right :solid 5px transparent;
+                border-top: solid 5px #9356DC;
+                animation: rotation 3s linear;
+            }
+        }
+
+        @keyframes chargement{
+        to {
+        transform: scale(1, 0);
+        }
+        }
+
+        @keyframes rotation{
+        to {
+            transform: rotate(360deg)
+        }
+        }
+        
+
+
     
 
 
