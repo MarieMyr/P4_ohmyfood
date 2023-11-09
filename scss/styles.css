@@ -407,93 +407,16 @@ footer i {
   transform: translateY(-55%);
 }
 
-.description {
-  padding-right: 50px;
-  background-color: yellow;
-}
-.description h4, .description p {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
+/***** Restaurant *****/
 .resto_main {
   padding: 0 1rem;
   background-color: #F6F6F6;
 }
 
 .menus {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 40px;
-}
-
-.menus_selections {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  font-family: "Roboto", sans-serif;
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  animation-fill-mode: both;
-  /* Animation*/
-  animation: apparition 1s;
-  animation-fill-mode: both;
-}
-.menus_selections .prix {
-  margin-left: auto;
-  font-weight: 900;
-  display: flex;
-  align-items: flex-end;
-  padding: 1rem;
-}
-.menus_selections .check {
-  background-color: #99E2D0;
-  border-radius: 0px 15px 15px 0px;
-  margin-right: -5rem;
-  width: 3rem;
-  display: grid;
-  place-items: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.menus_selections .check i {
-  color: #F6F6F6;
-}
-.menus_selections:hover .check {
-  margin-right: 0rem;
-  transition: 1s;
-}
-.menus_selections > * {
-  padding: 15px;
-}
-.menus_selections:nth-child(2) {
-  animation-delay: 400ms;
-}
-.menus_selections:nth-child(3) {
-  animation-delay: 600ms;
-}
-.menus_selections:nth-child(4) {
-  animation-delay: 800ms;
-}
-.menus_selections:nth-child(5) {
-  animation-delay: 1000ms;
-}
-
-description {
-  background-color: yellow;
-}
-description h4, description p {
-  margin: 0px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-description p {
-  font-weight: 300;
-  font-size: 15.04px;
 }
 
 .menus_group {
@@ -519,11 +442,102 @@ description p {
   left: 0rem;
 }
 
+.menus_selections {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  gap: 5px;
+  overflow: hidden;
+  animation-fill-mode: both;
+  animation: apparition 1s;
+}
+.menus_selections:nth-child(1) {
+  animation-delay: 200ms;
+}
+.menus_selections:nth-child(2) {
+  animation-delay: 400ms;
+}
+.menus_selections:nth-child(3) {
+  animation-delay: 600ms;
+}
+.menus_selections:nth-child(4) {
+  animation-delay: 800ms;
+}
+.menus_selections:nth-child(5) {
+  animation-delay: 1000ms;
+}
+.menus_selections .description {
+  padding-right: 50px;
+  width: 349px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus_selections .description h4 {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+  white-space: nowrap;
+}
+.menus_selections .description p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px;
+  margin: 0;
+  white-space: nowrap;
+}
+.menus_selections .prix {
+  margin-left: auto;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+  padding: 1rem;
+  padding-left: 0;
+}
+.menus_selections .check {
+  background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  margin-right: -4rem;
+  width: 3rem;
+  display: grid;
+  place-items: center;
+}
+.menus_selections .check i {
+  color: #F6F6F6;
+}
+.menus_selections:hover .check {
+  margin-right: 0rem;
+  transition: 1s;
+}
+.menus_selections:hover h4 {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus_selections:hover p {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.menus_selections > * {
+  padding: 15px;
+}
+
 .button {
   margin: auto;
   padding: 40px 0 40px 0;
 }
 
+/***** Animation ****/
 @keyframes apparition {
   0% {
     transform: translateY(50%);
@@ -534,6 +548,7 @@ description p {
     opacity: 1;
   }
 }
+/***** Media Queries *****/
 @media screen and (min-width: 820px) {
   .resto_title {
     text-align: center;

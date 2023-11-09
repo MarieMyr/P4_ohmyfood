@@ -40,107 +40,27 @@
 }
 }
 
-.description{
-   padding-right: 50px;
-   background-color: yellow;
 
-   h4, p {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-   }
-}
+/***** Restaurant *****/
 
 .resto_main {
    padding: 0 1rem;
    background-color: #F6F6F6;
 }
 
+
 .menus {
-display:grid ;
-grid-template-columns: 1fr;
+display: flex;
+flex-direction: column;
 gap: 40px;
-
-}
-
-
-.menus_selections{
-   background-color: white;
-   border-radius: 15px;
-   box-shadow: 0px 4px 10px 0px #00000040;
-   font-family: 'Roboto', sans-serif;
-   display: flex;
-   width: 100%;
-   overflow: hidden;
-   animation-fill-mode: both;
-   
-   
-
-   .prix {
-      margin-left: auto;
-      font-weight: 900;
-      display: flex;
-      align-items: flex-end;
-      padding: 1rem;
-}
-
-.check {
-   background-color: #99E2D0;
-   border-radius: 0px 15px 15px 0px;
-   margin-right: -5rem;   
-   width: 3rem;
-   display: grid;
-   place-items: center;
-
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
-
-   i {
-      color:#F6F6F6;
-   }
-}
-&:hover{
-   .check {
-      margin-right: 0rem; 
-      transition: 1s;
-   }
-}
-& > * {
-      padding: 15px;
-   }
-
-   /* Animation*/
-   animation: apparition 1s;
-   animation-fill-mode: both;
-   @for $i from 2 through 5{
-      &:nth-child(#{$i}) {
-         animation-delay: 200ms * $i;
-      }
-   }
-}
-
-description{
-   background-color: yellow;
-
-      h4 , p {
-      margin: 0px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-   }
-
-   p {
-      font-weight: 300;
-      font-size: 15.04px;
-      
-   }
 }
 
 .menus_group{
    display: flex;
    flex-direction: column;
    gap: 12px;
+   
+   
 
    h3 {
       margin: 0;
@@ -163,12 +83,117 @@ description{
    }
 }
 
+.menus_selections{
+   background-color: white;
+   border-radius: 15px;
+   box-shadow: 0px 4px 10px 0px #00000040;
+   font-family: 'Roboto', sans-serif;
+   display: flex;
+   gap: 5px;
+   overflow: hidden;
+   
+   
+   
+   animation-fill-mode: both;
+   animation: apparition 1s;
+
+   @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: 200ms * $i;
+      }
+      }
+
+   .description{
+      padding-right: 50px;
+      width: 349px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+     
+
+   
+   
+      h4{
+         font-size: 18px;
+         line-height: 21px;
+         margin: 0;
+         white-space: nowrap;
+
+      }
+   
+      p {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 17px;
+      margin: 0;
+      white-space: nowrap;
+
+      }
+   }
+
+   .prix {
+      margin-left: auto;
+      font-weight: 900;
+      display: flex;
+      align-items: flex-end;
+      padding: 1rem;
+      padding-left: 0;
+}
+
+.check {
+   background-color: #99E2D0;
+   border-radius: 0px 15px 15px 0px;
+   margin-right: -4rem;   
+   width: 3rem;
+   display: grid;
+   place-items: center;
+
+   i {
+      color:#F6F6F6;
+   }
+}
+&:hover{
+   .check {
+      margin-right: 0rem; 
+      transition: 1s;
+   }
+
+   h4{
+      font-size: 18px;
+      line-height: 21px;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+
+   }
+
+   p {
+   font-weight: 300;
+   font-size: 15px;
+   line-height: 17px;
+   margin: 0;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+
+   }
+}
+& > * {
+      padding: 15px;
+   }
+}
+
+
 .button {
 margin: auto;
 padding: 40px 0  40px 0;
 }
 
-@keyframes apparition {
+/***** Animation ****/
+
+@keyframes apparition{
    0% {
       transform: translateY(50%);
       opacity: 0;
@@ -181,6 +206,7 @@ padding: 40px 0  40px 0;
 }
 
 
+/***** Media Queries *****/
 
 @media screen and (min-width: 820px) {
 
@@ -202,8 +228,6 @@ padding: 40px 0  40px 0;
       display: flex;
    }
 }
-
-
 
 
 @media screen and (min-width: 1024px){
