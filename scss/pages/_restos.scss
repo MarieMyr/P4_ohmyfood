@@ -1,11 +1,5 @@
 
-.bannière img {
-   width: 100%;
-   object-fit: cover;
-   height: 275px;
-}
-
-.arrow {
+.header__arrow {
    display: grid;
    align-items: center;
    right: 70px;
@@ -14,21 +8,29 @@
    font-size: 25px;
 }
 
+.bannière__img {
+   width: 100%;
+   object-fit: cover;
+   height: 275px;
+}
+
+
 .resto_title{
    margin-top: -4rem;
    background-color: #F6F6F6; //variable couleurs
    border-radius: 2rem 2rem 0rem 0rem;
    position: relative;
 
- h2 {
-    font-family: "Shrikhand", sans-serif ; 
-    font-weight: 400;
-    height: 27px;
-    font-size: 28px;
-    padding: 2rem 1rem;
-    margin: 0px;
+   .resto_title__name {
+      font-family: "Shrikhand", sans-serif ; 
+      font-weight: 400;
+      height: 27px;
+      font-size: 28px;
+      padding: 2rem 1rem;
+      margin: 0px;
+   }
 
-   i {
+   .resto_title__icon {
       font-size: 2rem;
       height: 30px;
       position: absolute;
@@ -36,8 +38,8 @@
       top : 60%;
       transform: translateY(-53%) ;
    }
-
-   .fas {
+  
+   .descriptions__icons--heart {
       color: transparent;
       background-image: linear-gradient(to top,#9356DC,#FF79DA);
       background-clip: text;
@@ -45,17 +47,15 @@
       opacity: 0;
       transition: all 200ms ease-in-out;
   }
-  &:hover .fas{
+      &:hover .descriptions__icons--heart{
           opacity: 1;
-          transform: translateY(-55%) ;
-  
+          transform: translateY(-55%) 
       }
    
 }
-}
 
 
-/***** Restaurant *****/
+//Menu du restaurant
 
 .resto_main {
    padding: 0 1rem;
@@ -64,36 +64,34 @@
 
 
 .menus {
-display: flex;
-flex-direction: column;
-gap: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
 }
 
-.menus_group{
+.menus_groups{
    display: flex;
    flex-direction: column;
    gap: 12px;
    
    
+.menus_groups__titles {
+   margin: 0;
+   font-family: 'Roboto', sans-serif; //Répétition police
+   font-weight: 300;
+   text-transform: uppercase;
+   position: relative;
+   padding-bottom: 12px;
 
-   h3 {
-      margin: 0;
-      font-family: 'Roboto', sans-serif; //Répétition police
-      font-weight: 300;
-      text-transform: uppercase;
-      position: relative;
-      padding-bottom: 12px;
-
-      &::after {
-      position: absolute;
-      content: "";
-      height: 3px;
-      width: 40px;
-      background-color: #99E2D0; //variable couleurs
-      top: 1.75rem;
-      left: 0rem;
-         
-      }
+   &::after {
+   position: absolute;
+   content: "";
+   height: 3px;
+   width: 40px;
+   background-color: #99E2D0; //variable couleurs
+   top: 1.75rem;
+   left: 0rem;
+   }
    }
 }
 
@@ -118,35 +116,30 @@ gap: 40px;
       }
       }
 
-   .description{
-      padding-right: 50px;
-      width: 349px;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+      .description{
+         padding-right: 50px;
+         width: 349px;
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
      
-
-   
-   
-      h4{
+      .description__title {
          font-size: 18px;
          line-height: 21px;
          margin: 0;
          white-space: nowrap;
-
       }
    
-      p {
-      font-weight: 300;
-      font-size: 15px;
-      line-height: 17px;
-      margin: 0;
-      white-space: nowrap;
-
+      .description__txt {
+         font-weight: 300;
+         font-size: 15px;
+         line-height: 17px;
+         margin: 0;
+         white-space: nowrap;
       }
    }
 
-   .prix {
+   .description__prix {
       margin-left: auto;
       font-weight: 900;
       display: flex;
@@ -155,20 +148,21 @@ gap: 40px;
       left : -5px;
       position: relative;
       
-}
-
-.check {
-   background-color: #99E2D0; //variable couleurs
-   border-radius: 0px 15px 15px 0px;
-   margin-right: -4rem;   
-   width: 3rem;
-   display: grid;
-   place-items: center;
-   transition: 1s ;
-
-   i {
-      color:#F6F6F6; //variable couleurs
    }
+
+   .check {
+      background-color: #99E2D0; //variable couleurs
+      border-radius: 0px 15px 15px 0px;
+      margin-right: -4rem;   
+      width: 3rem;
+      display: grid;
+      place-items: center;
+      transition: 1s ;
+
+      .check__icon {
+         color:#F6F6F6; //variable couleurs
+      }
+   
 }
 &:hover{
    .check {
@@ -176,27 +170,24 @@ gap: 40px;
       transition: 1s;
    }
 
-   h4{
+   .description__title{
       font-size: 18px;
       line-height: 21px;
-      margin: 0;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-
-
+      margin: 0; //Répétitions
+      overflow: hidden; //Répétitions
+      white-space: nowrap; //Répétitions
+      text-overflow: ellipsis; //Répétitions
    }
 
-   p {
-   font-weight: 300;
-   font-size: 15px;
-   line-height: 17px;
-   margin: 0;
-   overflow: hidden;
-   white-space: nowrap;
-   text-overflow: ellipsis;
-
-   }
+      .description__txt {
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 17px;
+      margin: 0; //Répétitions
+      overflow: hidden; //Répétitions
+      white-space: nowrap; //Répétitions
+      text-overflow: ellipsis; //Répétitions
+      }
 }
 & > * {
       padding: 15px;
