@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&family=Shrikhand&display=swap");
-header {
+.header {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
@@ -11,7 +11,7 @@ header {
   padding: 14px 89px 20px 89px;
   position: relative;
 }
-header h1 {
+.header .header__title {
   font-style: italic;
   width: 197px;
   height: 36px;
@@ -202,21 +202,22 @@ a {
   inset: 0;
   z-index: 1;
   opacity: 0.8;
-  animation: chargement 1s 2s forwards;
+  animation: chargement 2s 2s forwards;
 }
 .loader::after {
   content: "";
-  height: 70px;
-  width: 70px;
-  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
   border-right: solid 5px transparent;
   border-top: solid 5px #9356DC;
-  animation: rotation 3s linear;
+  border-left: solid 5px #9356DC;
+  animation: rotation 1s infinite;
 }
 
 @keyframes chargement {
   to {
-    transform: scale(1, 0);
+    transform: scale(0);
   }
 }
 @keyframes rotation {
@@ -309,27 +310,27 @@ a {
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.2509803922);
 }
 
-footer {
+.footer {
   background-color: #353535;
   padding: 1rem 1rem;
   color: white;
   font-family: "Roboto", sans-serif;
 }
-footer h2 {
+.footer .footer__title {
   font-family: "Shrikhand";
   font-weight: 400;
   font-size: 18px;
 }
-footer p {
+.footer .footer__txt {
   padding: 0.1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
-footer i {
+.footer .footer__icons {
   padding-right: 0.5rem;
 }
 
 @media screen and (min-width: 820px) {
-  footer {
+  .footer {
     padding: 20px 35px;
     display: flex;
     flex-direction: row;
@@ -338,25 +339,25 @@ footer i {
   }
 }
 @media screen and (min-width: 1024px) {
-  footer {
+  .footer {
     position: relative;
     height: 50px;
     padding: 30px 25px 30px 25px;
   }
-  .logo {
+  .footer .footer__logo {
     right: 5rem;
     position: absolute;
     padding-left: 16rem;
     margin-top: 30px;
   }
-  .footer-info {
+  .footer .footer__info {
     position: absolute;
     display: flex;
     right: 500px;
     gap: 0.5rem;
     margin-top: 30px;
   }
-  .footer-info2 {
+  .footer .footer__info2 {
     align-items: center;
     display: flex;
     position: absolute;
@@ -364,8 +365,8 @@ footer i {
     gap: 0.5rem;
     margin-top: 30px;
   }
-  .footer-info2 p, .footer-info2 a {
-    font-weight: 300;
+  .footer .footer__info2 p, .footer .footer__info2 a {
+    font-weight: 400;
   }
 }
 .bannière img {

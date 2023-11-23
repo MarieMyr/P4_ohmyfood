@@ -2,7 +2,7 @@
 //Partie Localisation
 
 .localisation {
-    background-color:#EAEAEA;
+    background-color:#EAEAEA; //variable couleurs
     padding: 0.1rem;
     display: flex;
     align-items: center;
@@ -11,13 +11,13 @@
     text-align: center;
 
     & h3 {
-       font-family: 'Roboto', sans-serif;
+       font-family: 'Roboto', sans-serif; //Répétition police
         font-weight: 500;
-        color: #353535;
+        color: #353535; //variable couleurs
     }
 
     & i {
-        color: #353535;
+        color: #353535; //variable couleurs
 
     }
 }
@@ -27,19 +27,19 @@
 
 .info {
     text-align: center;
-    background-color: #F6F6F6;
+    background-color: #F6F6F6; //variable couleurs
     padding: 2.5rem;
 
     h2{
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif; //Répétition police
         
         height: 68px;
     }
 
     p {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Roboto', sans-serif; //Répétition police
         font-weight: 300 ;
-        color: #353535;
+        color: #353535; //variable couleurs
         height: 46px;
     
     }
@@ -49,12 +49,12 @@
 
 .fonctionnement {
     counter-reset: étapes;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; //Répétition police
     padding: 2rem 1rem 2rem 1rem;
     
 
 & li{
-    background-color: #F6F6F6;
+    background-color: #F6F6F6; //variable couleurs
     border-radius: 20px;
     padding: 1.7rem 2rem;
     box-shadow: 0px 4px 10px 0px #00000040;
@@ -64,8 +64,8 @@
     &::before{
         content: counter(étapes);
         counter-increment: étapes;
-        color: #FFFFFF;
-        background-color: #9356DC;
+        color: #FFFFFF; //variable couleurs
+        background-color: #9356DC; //variable couleurs
         width: 1.7rem;
         height: 1.7rem;
         display: grid;
@@ -92,23 +92,23 @@
 }
 
     .fa-mobile-screen-button {
-        color: #7E7E7E;
+        color: #7E7E7E; //variable couleurs
     }
     
     .fa-list-ul {
-        color:#7E7E7E;
+        color:#7E7E7E; //variable couleurs
     }
 
     .fa-store {
-        color: #9356DC;
+        color: #9356DC; //variable couleurs
     }
 }
 
 //Partie Restaurants
 
 .restaurants {
-    background-color: #F6F6F6;
-    font-family: 'Roboto', sans-serif;
+    background-color: #F6F6F6; //variable couleurs
+    font-family: 'Roboto', sans-serif; //Répétition police
     padding: 1.5rem;
 }
 
@@ -128,7 +128,7 @@
     width: 80px;
     background-color: #99E2D0;
     border-radius: 2px;
-    color: #008766;
+    color: #008766; //variable couleurs
     display: grid;
     place-items: center;
     right: 1rem;
@@ -138,7 +138,7 @@
 
 .cartes{
     border-radius: 15px;
-    background-color: white;
+    background-color: white; //variable couleurs
     
     &__img {
     height: 200px;
@@ -186,7 +186,7 @@
 
     .fas {
         color: transparent;
-        background-image: linear-gradient(to top,#9356DC,#FF79DA);
+        background-image: linear-gradient(to top,#9356DC,#FF79DA); //variable couleurs
         background-clip: text;
         -webkit-background-clip: text;
         opacity: 0;
@@ -204,26 +204,28 @@
             position: fixed;
             display: grid;
             place-items: center;
-            background-color:#FFFFFF;
+            background-color:#FFFFFF; //variable couleurs
             inset: 0;
             z-index: 1;
             opacity: 0.8;
-            animation: chargement 1s 2s forwards;
+            animation: chargement 2s 2s forwards ;
         
              &::after {
                 content: "";
-                height: 70px;
-                width: 70px;
-                border-radius: 50px;
+                height: 100px;
+                width: 100px;
+                border-radius: 50%;
                 border-right :solid 5px transparent;
-                border-top: solid 5px #9356DC;
-                animation: rotation 3s linear;
+                border-top: solid 5px #9356DC; //variable couleurs
+                border-left: solid 5px #9356DC; //variable couleurs
+                animation: rotation 1s infinite;
+                
             }
         }
 
         @keyframes chargement{
         to {
-        transform: scale(1, 0);
+        transform: scale(0);
         }
         }
 
