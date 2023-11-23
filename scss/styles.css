@@ -37,39 +37,44 @@ a {
   gap: 1rem;
   text-align: center;
 }
-.localisation h3 {
+.localisation .localisation__title {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #353535;
 }
-.localisation i {
+.localisation .localisation__icon {
   color: #353535;
 }
 
-/*****  Onglet information *****/
 .info {
   text-align: center;
   background-color: #F6F6F6;
   padding: 2.5rem;
 }
-.info h2 {
+.info .info__title {
   font-family: "Roboto", sans-serif;
   height: 68px;
 }
-.info p {
+.info .info__txt {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #353535;
   height: 46px;
 }
 
-/***** Fonctionnement *****/
 .fonctionnement {
   counter-reset: étapes;
   font-family: "Roboto", sans-serif;
   padding: 2rem 1rem 2rem 1rem;
 }
-.fonctionnement li {
+.fonctionnement .fonctionnement__liste {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+  padding-left: 28px;
+}
+.fonctionnement .fonctionnement__listeElements {
   background-color: #F6F6F6;
   border-radius: 20px;
   padding: 1.7rem 2rem;
@@ -77,7 +82,7 @@ a {
   position: relative;
   width: auto;
 }
-.fonctionnement li::before {
+.fonctionnement .fonctionnement__listeElements::before {
   content: counter(étapes);
   counter-increment: étapes;
   color: #FFFFFF;
@@ -91,24 +96,14 @@ a {
   bottom: 1.4rem;
   left: -1rem;
 }
-.fonctionnement ol {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  list-style-type: none;
-  padding-left: 28px;
-}
-.fonctionnement i {
+.fonctionnement .fonctionnement__icons {
   margin-right: 1rem;
 }
-.fonctionnement .fa-mobile-screen-button {
-  color: #7E7E7E;
-}
-.fonctionnement .fa-list-ul {
-  color: #7E7E7E;
-}
-.fonctionnement .fa-store {
+.fonctionnement .fonctionnement__icon--purple {
   color: #9356DC;
+}
+.fonctionnement .fonctionnement__icons--grey {
+  color: #7E7E7E;
 }
 
 .restaurants {
@@ -122,10 +117,10 @@ a {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
-.cartes_restaurants .new {
+.cartes_restaurants .cartes_restaurants__new {
   position: relative;
 }
-.cartes_restaurants .new::before {
+.cartes_restaurants .cartes_restaurants__new::before {
   content: "Nouveau";
   position: absolute;
   height: 29px;
@@ -163,25 +158,25 @@ a {
 .cartes_description {
   position: relative;
 }
-.cartes_description h3, .cartes_description p {
+.cartes_description .descriptions__title {
+  padding-top: 0.5rem;
   margin: 0.5rem;
   margin-left: 18px;
 }
-.cartes_description p {
+.cartes_description .descriptions__txt {
   font-weight: 300;
   padding-bottom: 0.5rem;
+  margin: 0.5rem;
+  margin-left: 18px;
 }
-.cartes_description h3 {
-  padding-top: 0.5rem;
-}
-.cartes_description i {
+.cartes_description .descriptions__icons {
   font-size: 1.8rem;
   position: absolute;
   right: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
 }
-.cartes_description .fas {
+.cartes_description .descriptions__icons--heart {
   color: transparent;
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   background-clip: text;
@@ -189,7 +184,7 @@ a {
   opacity: 0;
   transition: all 250ms ease-in-out;
 }
-.cartes_description:hover .fas {
+.cartes_description:hover .descriptions__icons--heart {
   opacity: 1;
   transition: all 250ms ease-in-out;
 }
@@ -226,49 +221,51 @@ a {
   }
 }
 @media screen and (min-width: 820px) {
+  .restaurants {
+    padding-bottom: 50px;
+  }
   .cartes_restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-  .fonctionnement h2 {
+  .fonctionnement_title {
     padding-left: 10px;
   }
-  .restaurants {
-    padding-bottom: 50px;
-  }
-  .fonctionnement ol {
+  .fonctionnement__liste {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding: 13px;
   }
-  .fonctionnement ol li {
+  .fonctionnement__listeElements {
     padding: 1.7rem 1rem;
-    width: px;
   }
 }
 @media screen and (min-width: 1024px) {
-  h1 {
-    text-align: center;
-  }
   .info {
     padding: 30px;
   }
-  h2, p {
+  .info__title .fonctionnement_title {
     margin: 0;
   }
-  .fonctionnement, .restaurants {
+  .info__txt .descriptions__txt {
+    margin: 0;
+  }
+  .fonctionnement {
     padding: 50px 250px;
   }
-  .fonctionnement ol {
+  .fonctionnement .fonctionnement__liste {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  .fonctionnement ol li {
+  .fonctionnement .fonctionnement__listeElements {
     width: 322px;
   }
-  .cartes_restaurants {
+  .restaurants {
+    padding: 50px 250px;
+  }
+  .restaurants .cartes_restaurants {
     margin-top: 30px;
     gap: 50px 100px;
   }
