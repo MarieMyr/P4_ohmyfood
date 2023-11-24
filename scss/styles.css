@@ -288,7 +288,7 @@ a {
 
 @keyframes chargement {
   to {
-    transform: scale(0);
+    transform: scale(1, 0);
   }
 }
 @keyframes rotation {
