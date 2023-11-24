@@ -116,6 +116,10 @@
 
         .fonctionnement__icons{
             margin-right: 1rem;
+
+            @media screen and (min-width: 1024px){
+                margin-left: 1rem;
+            }
         }
 
         .fonctionnement__icon--purple {

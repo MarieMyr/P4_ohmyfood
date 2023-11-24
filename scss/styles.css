@@ -142,6 +142,11 @@ a {
 .fonctionnement .fonctionnement__icons {
   margin-right: 1rem;
 }
+@media screen and (min-width: 1024px) {
+  .fonctionnement .fonctionnement__icons {
+    margin-left: 1rem;
+  }
+}
 .fonctionnement .fonctionnement__icon--purple {
   color: #9356DC;
 }
@@ -382,7 +387,7 @@ a {
 .header__arrow {
   display: grid;
   align-items: center;
-  right: 70px;
+  right: 55px;
   top: 5px;
   position: relative;
   font-size: 25px;
@@ -396,7 +401,7 @@ a {
 @media screen and (min-width: 1024px) {
   .header__arrow {
     display: flex;
-    right: 550px;
+    right: 650px;
   }
 }
 
@@ -430,7 +435,7 @@ a {
   font-size: 2rem;
   height: 30px;
   position: absolute;
-  right: 5rem;
+  right: 2rem;
   top: 60%;
   transform: translateY(-53%);
 }
@@ -566,7 +571,7 @@ a {
 .menus_selections .check {
   background-color: #99e2d0;
   border-radius: 0px 15px 15px 0px;
-  margin-right: -4rem;
+  margin-right: -5rem;
   width: 3rem;
   display: grid;
   place-items: center;

@@ -2,7 +2,7 @@
 .header__arrow {
    display: grid;
    align-items: center;
-   right: 70px;
+   right: 55px;
    top : 5px;
    position: relative;
    font-size: 25px;
@@ -14,7 +14,7 @@
 
    @media screen and (min-width: 1024px){
       display: flex;
-      right: 550px,
+      right: 650px,
    }
 }
 
@@ -48,7 +48,7 @@
          font-size: 2rem;
          height: 30px;
          position: absolute;
-         right: 5rem;
+         right: 2rem;
          top : 60%;
          transform: translateY(-53%) ;
       }
@@ -185,7 +185,7 @@
       .check {
          background-color: $tertiary-color;
          border-radius: 0px 15px 15px 0px;
-         margin-right: -4rem;   
+         margin-right: -5rem;   
          width: 3rem;
          display: grid;
          place-items: center;
