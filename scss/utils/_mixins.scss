@@ -1,1 +1,15 @@
+@mixin box-shadow {
+    box-shadow: 0px 4px 10px 0px #00000040;
+}
+
+@mixin resto_txt_property {
+        margin: 0; 
+         overflow: hidden; 
+         white-space: nowrap; 
+         text-overflow: ellipsis; 
+}
+
+@mixin color_darken_new {
+    color: darken($tertiary-color, 35%)
+}
 
