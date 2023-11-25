@@ -9,15 +9,21 @@
     justify-content: center;
     gap:1rem;
     text-align: center;
-    &__title {
-        font-weight: 500;
-        color: $color-txt;
-    }
+    height: 50px;
     &__icon {
         color: $color-txt; 
     }
+    &__search{
+        border: none;
+        color: $color-txt; 
+        font-weight:600;
+        font-size: 16px;
+        display: flex;
+        background-color:#EAEAEA;
+        text-align: center;
+        width: 120px;
+    }
 }
-
 
 //Partie Information
 
